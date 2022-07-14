@@ -10,7 +10,11 @@ class TodoListController extends Controller
     public function index() 
     {
         $lists = TodoList::all();
-
         return response($lists);
+    }
+
+    public function show(TodoList $list)
+    {
+        return response($list);
     }
 }
